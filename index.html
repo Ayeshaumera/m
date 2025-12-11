@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Birthday Wish</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(135deg, #1a1a1a, #0d0d10);
+        background-image: url('h-phase-1.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-family: 'Poppins', Brush Script MT;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        color: white;
+    }
+
+    .container {
+        text-align: center;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    .link-btn {
+        font-size: 28px;
+        color: black;
+        text-shadow: 0 0 20px wheat;
+        text-decoration: none;
+        padding: 15px 30px;
+        border: 2px solid #c8b6ff;
+        border-radius: 30px;
+        background:rgb(82, 79, 109);
+        backdrop-filter: blur(10px);
+        transition: 0.3s;
+    }
+
+    .link-btn:hover {
+        background: wheat;
+        color: rgb(33, 46, 55);
+        box-shadow: 0 0 20px wheat;
+    }
+
+    /* Birthday Page Hidden */
+    #wishPage {
+        display: none;
+        text-align: center;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+        font-size: 35px;
+        color:#ffcda2;
+        text-shadow: 0 0 20px  #a4a0aa;
+    }
+
+    p {
+        font-size: 24px;
+        color: #bcbfc6;
+        text-shadow:0 0 20px #b4a8b4;
+    }
+
+    .backBtn {
+        margin-top: 10px;
+        font-size: 10px;
+        padding: 5px 10px;
+        border-radius: 10px;
+        background: #c39771;
+        color: black;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .backBtn:hover {
+        box-shadow: 0 0 15px #a382a5;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container" id="mainPage">
+    <a class="link-btn" onclick="showWish()">🎉 Click Here for a Birthday Surprise 🎉</a>
+</div>
+
+<div id="wishPage">
+    <h1>🎊 Happiest Birthday
+        Muzzu!!
+    </h1>
+    <p>🎈May Allah bless you with a destiny so pure & beautiful
+         that it makes your heart smile every day.You deserve every good thing✨
+         Thank you Gilhari 🐿️ for the laughter and the comfort you give💛
+        </p>
+    <a class="backBtn" onclick="goBack()">Go Back</a>
+</div>
+
+<script>
+function showWish() {
+    document.getElementById("mainPage").style.display = "none";
+    document.getElementById("wishPage").style.display = "block";
+}
+
+function goBack() {
+    document.getElementById("wishPage").style.display = "none";
+    document.getElementById("mainPage").style.display = "block";
+}
+</script>
+
+</body>
+</html>
